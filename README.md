@@ -7,7 +7,7 @@
     <br>
     It wasn't meant to be this complicated...
   </p>
-  <a style="color:white">
+  <a href="https://thefatpotato115.github.io/Clock" style="color:white">
     Visit the live page at thefatpotato115.github.io/Clock.
   </a>
 </html>
