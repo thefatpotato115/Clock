@@ -17,9 +17,10 @@
 </html>
 <script>
     let time = prompt("What time do you want the clock to have?", "Example: 13:00, 07:00")
+    let name = prompt("What do you want the title to be?", "Use + Instead of spaces")
     function update() {
     const attr = document.createAttribute("src");
-    attr.value = "https://vclock.com/embed/#time=" + time + "&title=Custom+Clock&theme=1&color=3&ampm=1&showdate=0";
+    attr.value = "https://vclock.com/embed/#time=" + time + "&title=" + name + "&theme=1&color=3&ampm=1&showdate=0";
     document.getElementById("clock").setAttributeNode(attr);
 }
 </script>
