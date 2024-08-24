@@ -1,11 +1,12 @@
 <html>
-    <body style="width:98%; height:95%; background:black" onload="prompt:'What time would you like it to end?'">
+    <body style="width:98%; height:95%; background:black" onload="update()">
         <p align:center>
             <iframe
+                id="clock"
                 width="95%"
                 height="95%"
                 align:center
-                src="https://vclock.com/embed/#time=*****&title=Custom+Clock&theme=1&color=3&ampm=1&showdate=0"
+                src="https://vclock.com/embed/"
                 frameborder="0"
                 allowfullscreen>
             </iframe>
@@ -15,3 +16,10 @@
         Clock - Custom
     </title>
 </html>
+<script>
+    let time=prompt("What time do you want the clock to have?", "13:00")
+    function update() {
+	const clock = document.getElementById("clock");
+	demo.setAttribute("src", "'https://vclock.com/embed/#time=' + time + '&title=Custom+Clock&theme=1&color=3&ampm=1&showdate=0'")
+    }
+</script>
