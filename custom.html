@@ -6,7 +6,6 @@
                 width="95%"
                 height="95%"
                 align:center
-                src="https://vclock.com/embed/"
                 frameborder="0"
                 allowfullscreen>
             </iframe>
@@ -19,7 +18,8 @@
 <script>
     let time=prompt("What time do you want the clock to have?", "13:00")
     function update() {
-	const clock = document.getElementById("clock");
-	clock.setAttribute("src", "'https://vclock.com/embed/#time=' + time + '&title=Custom+Clock&theme=1&color=3&ampm=1&showdate=0'")
-    }
+    const attr = document.createAttribute("src");
+    attr.value = "https://vclock.com/embed/#time=" + time + "&title=Custom+Clock&theme=1&color=3&ampm=1&showdate=0";
+    document.getElementById("clock").setAttributeNode(attr);
+}
 </script>
