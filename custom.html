@@ -50,6 +50,6 @@
         const timeDifference = getTimeDifference(targetHour, targetMinute);
     
         setTimeout(() => {
-            window.open('/Clock/clock.html'); window.close();
+            location.replace('/Clock/clock.html');
         }, timeDifference);
 </script>
