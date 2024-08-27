@@ -15,5 +15,32 @@
         Clock - Hawk Time
     </title>
     <link rel="icon" type="image/x-icon" href="/Clock/Potato.ico">
+    <script>
+        // Function to get the time difference in milliseconds
+        function getTimeDifference(targetHour, targetMinute) {
+            const now = new Date();
+          const target = new Date();
+        
+         target.setHours(targetHour, targetMinute, 0, 0);
+        
+         if (now > target) {
+            // If the target time is in the past for today, set it for tomorrow
+            target.setDate(target.getDate() + 1);
+          }
+        
+           return target - now;
+            }
+    
+        // Set the target update time (24-hour format)
+        const targetHour = 11; 
+        const targetMinute = 32; 
+    
+        // Calculate time difference and set timeout
+        const timeDifference = getTimeDifference(targetHour, targetMinute);
+    
+        setTimeout(() => {
+            location.replace(/Clock/5thpre.html);
+        }, timeDifference);
+    </script>
 </html>
 </html>

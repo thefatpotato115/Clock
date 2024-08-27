@@ -26,29 +26,4 @@
     attr.value = "https://vclock.com/embed/#time=" + time + "&title=" + name + "&theme=1&color=3&ampm=1&showdate=0";
     document.getElementById("clock").setAttributeNode(attr);
     }
-    // Function to get the time difference in milliseconds
-    function getTimeDifference(targetHour, targetMinute) {
-        const now = new Date();
-      const target = new Date();
-    
-     target.setHours(targetHour, targetMinute, 0, 0);
-    
-     if (now > target) {
-        // If the target time is in the past for today, set it for tomorrow
-        target.setDate(target.getDate() + 1);
-      }
-    
-       return target - now;
-        }
-
-    // Set the target update time (24-hour format)
-    const targetHour = 11;  // 3 PM
-    const targetMinute = 10; // 30 minutes
-
-    // Calculate time difference and set timeout
-    const timeDifference = getTimeDifference(targetHour, targetMinute);
-
-    setTimeout(() => {
-        window.open('https://youtube.com');
-    }, timeDifference);
 </script>
