@@ -18,8 +18,8 @@
 </html>
 <script>
     // Ask for a target time and title
-    let hour = prompt("What time do you want the clock to have? (Hour)", "07")
-    let minute = prompt("What time do you want the clock to have? (Minute)", "15")
+    let hour = prompt("What time do you want the clock to have? (Hour)", "13")
+    let minute = prompt("What time do you want the clock to have? (Minute)", "45")
     let name = prompt("What do you want the title to be?", "My Custom Clock")
     // Update the iframe
     function update() {
@@ -50,6 +50,6 @@
         const timeDifference = getTimeDifference(targetHour, targetMinute);
     
         setTimeout(() => {
-            location.replace('/Clock/clock.html');
+            location.reload();
         }, timeDifference);
 </script>
